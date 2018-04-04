@@ -4,13 +4,6 @@ sudo: false
 language:
   - cpp
 
-addons:
-  apt:
-    packages:
-      - libgtest-dev
-    sources:
-      - ubuntu-toolchain-r-test
-
 matrix:
   include:
     - os: linux
@@ -19,24 +12,7 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - g++-5
-      env:
-         - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-6
-      env:
-        - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
+            - libgtest-dev
             - g++-7
       env:
         - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
