@@ -3,7 +3,7 @@ CXX=g++
 CXXFLAGS=-Wall
 LDFLAGS=-lstdc++ -lgtest -lgtest_main
 
-TARGET=$(notdir $(CURDIR))
+TARGET=travis
 SRC=$(wildcard *.cpp)
 OBJ=$(patsubst %.cpp,%.o,$(SRC))
 

@@ -1,0 +1,14 @@
+
+sudo: false
+
+language:
+  - cpp
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+
+script:
+  - make all
+  - ./travis
