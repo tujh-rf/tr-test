@@ -1,6 +1,6 @@
 
 CXX=g++
-CXXFLAGS=-Wall
+CXXFLAGS=-Wall -std=c++14
 LDFLAGS=-lstdc++ -lgtest -lgtest_main
 
 TARGET=travis
