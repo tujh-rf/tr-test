@@ -6,11 +6,10 @@ language:
 
 addons:
   apt:
+    packages:
+      - libgtest-dev
     sources:
       - ubuntu-toolchain-r-test
-
-install:
-    - sudo apt-get install libgtest-dev
 
 script:
   - make all
