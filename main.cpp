@@ -1,10 +1,8 @@
 #include <iostream>
 #include <memory>
+#include <gtest/gtest.h>
 
-int main()
-{
-    auto p = std::make_unique< int > ( 10 );
-    std::cout << "p = " << *p.get() << std::endl;
-
-    return 0;
+TEST(Simple, Main) {
+    auto p = std::make_unique< int >( 10 );
+    ASSERT_TRUE((*p) == 10);
 }

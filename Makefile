@@ -1,6 +1,7 @@
 
 CXX=g++
 CXXFLAGS=-Wall
+LDFLAGS=-lstdc++ -lgtest -lgtest_main
 
 TARGET=$(notdir $(CURDIR))
 SRC=$(wildcard *.cpp)
