@@ -1,5 +1,5 @@
 
-CXX=g++
+CXX=g++-7
 CXXFLAGS=-Wall -std=c++14
 LDFLAGS=-lstdc++ -lgtest -lgtest_main
 
