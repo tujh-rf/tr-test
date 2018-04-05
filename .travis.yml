@@ -12,7 +12,7 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - libgtest0
+            - libgtest
             - libgtest-dev
             - g++-7
       env:
