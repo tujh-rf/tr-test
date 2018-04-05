@@ -7,6 +7,7 @@ language:
 matrix:
   include:
     - os: linux
+      env: COMPILER_NAME=gcc CXX=g++-7 CC=gcc-7
       addons:
         apt:
           sources:
