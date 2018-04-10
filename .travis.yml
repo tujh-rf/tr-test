@@ -30,10 +30,12 @@ before_install:
 
 script:
   - make all
-  - ./travis --gtest_output=junit_xml:output.xml > gtest.xml
+  - ./travis --gtest_output=junit_xml:output.xml > gtest.$($TRAVIS_BRANCH).xml
 
 deploy:
   provider: releases
   api_key: $GH_OAUTH
-  file: gtest.xml
+  file: gtest.$(TRAVIS_BRANCH).xml
   skip_cleanup: true
+  on:
+    all_branches: true
