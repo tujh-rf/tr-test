@@ -14,7 +14,7 @@ all: ${TARGET}
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 ${TARGET}: ${OBJ}
-	@$(CXX) $(LDFLAGS) -o $(TARGET) $(OBJ)
+	@$(CXX) -o $(TARGET) $(OBJ) $(LDFLAGS)
 
 .PHONY: clean
 clean:
