@@ -30,5 +30,10 @@ before_install:
 
 script:
   - make all
-  - ./travis
+  - ./travis --gtest_output=junit_xml:output.xml > gtest.xml
 
+deploy:
+  provider: releases
+  api_key: $GH_OAUTH
+  file: gtest.xml
+  skip_cleanup: true
