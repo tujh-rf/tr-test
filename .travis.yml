@@ -38,4 +38,4 @@ deploy:
   file: gtest.$(TRAVIS_BRANCH).xml
   skip_cleanup: true
   on:
-    all_branches: true
+    tags: true
