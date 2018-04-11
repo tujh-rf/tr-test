@@ -30,4 +30,7 @@ before_install:
 
 script:
   - make all
-  - ./travis
+  - ./travis --gtest_output="xml:gtest.xml"
+
+notifications:
+  email: true
